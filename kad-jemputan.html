@@ -64,6 +64,11 @@
 
     /* Responsive */
     @media (max-width:880px){
+      .card{grid-template-columns:1fr;max-width:100%;}
+      .info, .visual{padding:20px;}
+      .illustration{max-width:200px;}
+      form{width:100%;}
+    
       .card{grid-template-columns:1fr;max-width:420px}
       .visual{padding:22px}
     }
@@ -144,6 +149,30 @@
         </div>
 
       </aside>
+
+      <!-- Tambahan: QR Code dan Muzik -->
+      <section style="padding:20px; text-align:center;">
+        <h3 style="margin:0 0 10px; color:#0f172a;">Imbas QR untuk Lokasi</h3>
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://contoh-lokasi.com" alt="QR Code Lokasi" style="width:150px;height:150px;" />
+
+        <h3 style="margin-top:20px; color:#0f172a;">Latar Muzik</h3>
+        <audio controls autoplay loop>
+          <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+          Browser anda tidak menyokong audio.
+        </audio>
+      </section>
+
+      <!-- RSVP Form -->
+      <section style="padding:20px;">
+        <h3 style="text-align:center; color:#0f172a; margin-bottom:10px;">Borang RSVP</h3>
+        <form action="#" method="post" style="display:flex; flex-direction:column; gap:10px; max-width:400px; margin:0 auto;">
+          <input type="text" name="nama" placeholder="Nama Penuh" required style="padding:10px; border-radius:8px; border:1px solid #ccc;">
+          <input type="email" name="email" placeholder="Email" required style="padding:10px; border-radius:8px; border:1px solid #ccc;">
+          <input type="text" name="telefon" placeholder="No Telefon" required style="padding:10px; border-radius:8px; border:1px solid #ccc;">
+          <textarea name="pesanan" placeholder="Ucapan (Jika ada)" rows="3" style="padding:10px; border-radius:8px; border:1px solid #ccc;"></textarea>
+          <button type="submit" style="padding:12px; border:none; border-radius:10px; font-weight:700; background:linear-gradient(90deg,var(--accent),var(--accent2)); color:white; cursor:pointer;">Hantar RSVP</button>
+        </form>
+      </section>
 
       <div class="footer">
         <p>Hubungi: +60 12-345 6789 • organizer@example.com</p>
